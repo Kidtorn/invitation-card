@@ -1,0 +1,275 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins font */
+}
+
+body {
+  background: linear-gradient(135deg, #4E8C4A, #00B300, #D5006D, #4D1C1D, #5C3A3A); /* Gradient with specified colors */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Centering the card */
+.container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(152, 251, 152, 0.9)); /* Soft gradient for the card */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  transform: perspective(1000px) translateZ(0);
+  position: relative; /* For positioning decorative elements */
+}
+
+/* Fun Background Pattern */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/pattern.png'); /* Example background pattern */
+  opacity: 0.1; /* Make it subtle */
+  z-index: 0; /* Place it behind the content */
+}
+
+/* Flier Image Container */
+.flier-container {
+  width: 300px; /* Set width for the circular image */
+  height: 300px; /* Set height to match width */
+  border-radius: 50%; /* Make the container circular */
+  overflow: hidden; /* Ensures no overflow outside the circle */
+  margin: 0 auto 20px; /* Centered image with margin below */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.flier-image {
+  width: 100%; /* Cover the entire container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem; /* Slightly larger font size */
+  font-weight: 600; /* Make it bolder */
+  color: #3b5998; /* Bright theme color */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Enhanced text shadow for 3D effect */
+}
+
+.intro {
+  font-size: 1.2rem; /* Slightly larger font size */
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Subtle text shadow */
+  color: #e91e63; /* Bright text color */
+}
+
+.details p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600; /* Make details bolder */
+}
+
+/* Countdown Timer */
+#countdown {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  font-weight: 600; /* Make countdown bolder */
+  color: #ff5722; /* Countdown color */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* RSVP Button */
+.rsvp-button {
+  background-color: #4caf50; /* Green color for the button */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600; /* Make button text bolder */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Button shadow for 3D effect */
+}
+
+.rsvp-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+/* Decorative Elements - Randomly positioned */
+.emoji {
+  position: absolute;
+  font-size: 2rem; /* Adjust size for visibility */
+  opacity: 0.5; /* Make emojis semi-transparent */
+}
+
+/* Emoji Positions */
+/* Emoji Positions */
+.emoji1 { top: 5%; left: 5%; }
+.emoji9 { top: 5%; left: 90%; }
+.emoji2 { top: 20%; right: 10%; }
+.emoji3 { top: 30%; left: 20%; }
+.emoji4 { top: 40%; right: 15%; }
+.emoji5 { bottom: 5%; left: 5%; }
+.emoji6 { bottom: 15%; right: 15%; }
+.emoji7 { top: 62%; left: 32%; }
+.emoji8 { bottom: 5%; right: 5%; }
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.2s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 1.2s ease-out forwards;
+}
+
+.bounce-hover {
+  animation: bounce 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .flier-container {
+    width: 90%; /* Adjust image size for mobile */
+    height: 90%; /* Same as above */
+  }
+
+  .rsvp-button {
+    width: 100%;
+  }
+}
+/* Envelope Styles */
+/* Envelope Styles */
+.envelope {
+  background: url('https://www.transparenttextures.com/patterns/paper.png') no-repeat; /* Envelope background texture */
+  background-size: cover; /* Cover the entire envelope */
+  border: 2px solid #ff7e5f; /* Envelope border */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+  text-align: center; /* Center text */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  position: relative; /* For positioning content */
+}
+
+.envelope:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Invite Content Styles */
+.invite-content {
+  color: #4d1c1d; /* Dark text color for visibility */
+}
+
+.invite-content h2 {
+  font-size: 2.5rem; /* Increase size */
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.invite-content h3 {
+  font-size: 1.5rem; /* Increase size */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Open Button Styles */
+.open-button {
+  background-color: #4caf50; /* Green background for button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold; /* Make button text bolder */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Button shadow for depth */
+}
+
+.open-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+
+/* Initially hide the card */
+.card {
+  display: none; /* Hide the card initially */
+}
+
+/* Reveal card on animation */
+.card.show {
+  display: block; /* Show the card */
+  animation: fadeIn 1s ease forwards; /* Animate card appearance */
+}
+/* Close Button Styles */
+.close-button {
+  position: absolute; /* Position it absolutely within the card */
+  left: 20px; /* Adjust the position from the left */
+  top: 20px; /* Adjust the position from the top */
+  background-color: transparent; /* Transparent background */
+  color: #ff5722; /* Close button color */
+  border: none; /* No border */
+  font-size: 1.2rem; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  font-weight: bold; /* Make it bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}

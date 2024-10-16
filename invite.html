@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're Invited!</title>
+  <link rel="stylesheet" href="invite.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div id="envelope" class="envelope animate-fade-in">
+      <div class="invite-content">
+        <h2>🎉 Jedidiah is One! 🎉</h2>
+        <h3>You're Invited!</h3>
+        <button class="open-button" onclick="showCard()">Click to Open</button>
+      </div>
+    </div>
+    
+    
+    <div class="card">
+      <div class="flier-container">
+        <img src="invite.jpg" alt="Event Flier" class="flier-image animate-zoom-in">
+      </div>
+
+      <h1 class="animate-slide-in">🎉 You're Invited! 🎉</h1>
+      <p class="intro animate-fade-in">
+        We would love for you to join us in celebrating this special event!
+      </p>
+
+      <div class="details animate-slide-up">
+        <p><strong>Date:</strong> October 19, 2024</p>
+        <p><strong>Time:</strong> 2:00 PM</p> <!-- Updated time -->
+        <p><strong>Location:</strong> No 12 Ummar Shehu Street off 14 Road Gwarimpa</p> <!-- Updated location -->
+      </div>
+
+      <div id="countdown" class="animate-fade-in"></div>
+
+      <button class="rsvp-button bounce-hover" onclick="rsvp()">RSVP Now</button>
+      <!-- Scattered Emojis -->
+      <span class="emoji emoji1">🎉</span>
+      <span class="emoji emoji3">🎊</span>
+      <span class="emoji emoji4">✨</span>
+      <span class="emoji emoji5">✨</span>
+      <span class="emoji emoji6">🎶</span>
+      <span class="emoji emoji7">🌈</span>
+      <span class="emoji emoji8">🎂</span>
+      <span class="emoji emoji9">🎉</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
